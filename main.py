@@ -88,7 +88,7 @@ if __name__ == "__main__":
     subjects = 15
     epochs = 200
     classes = 3  # Num. of classes
-    Network = DSGCN
+    Network = PDGCN
 
     #1、创建日志
     dfile = create_log(Network)
