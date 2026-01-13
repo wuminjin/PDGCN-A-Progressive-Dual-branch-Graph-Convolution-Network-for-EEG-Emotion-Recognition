@@ -8,7 +8,7 @@ from sklearn.metrics import roc_auc_score, accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 
 from datapipe import build_dataset, get_dataset
-from DSGCN import DSGCN
+from PDGCN import PDGCN
 from utils import set_seed, reset_seed
 
 seed = 520
