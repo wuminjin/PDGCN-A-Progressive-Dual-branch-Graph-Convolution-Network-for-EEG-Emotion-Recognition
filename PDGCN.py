@@ -34,7 +34,7 @@ class GCNmodel(nn.Module):
         return out
 
 
-class DSGCN(torch.nn.Module):
+class PDGCN(torch.nn.Module):
     def __init__(self):
         super().__init__()
 
@@ -90,15 +90,3 @@ class DSGCN(torch.nn.Module):
         pred = F.softmax(x, 1)
 
         return x, pred
-
-
-if __name__ == '__main__':
-    input = torch.randn(992, 1325).to(device)
-    batch = torch.zeros(992, dtype=torch.long).to(device)
-    model = DSGCN().to(device)
-    output, pred = model(x=input, edge_index=None, batch=batch)
-    print(output.shape)
-    # print(output)
-    # print(pred)
-    # total_params = sum(p.numel() for p in model.parameters())
-    # print(f"Total parameters: {total_params}")#2091475
